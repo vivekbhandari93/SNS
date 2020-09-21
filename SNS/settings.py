@@ -125,5 +125,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = Path.joinpath(BASE_DIR, 'static')
 
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/post_list/'
 LOGOUT_REDIRECT_URL = '/'
