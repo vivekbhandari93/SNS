@@ -31,12 +31,12 @@ class JoinGroup(LoginRequiredMixin,RedirectView):
 
         try:
             GroupMember.objects.create(user=self.request.user,group=group)
-        except IntegrityError:
+        except:
             messages.warning(self.request,'Warning already a member!')
         else:
             messages.success(self.request, 'You are now a member!')
         
-        return super().get(request, *args, **kwargs)
+        return super().get(self.request, *args, **kwargs)
 
 
 class LeaveGroup(LoginRequiredMixin, RedirectView):
