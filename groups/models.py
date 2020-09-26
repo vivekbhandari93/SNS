@@ -1,7 +1,7 @@
 from django.db import models
-from django.utils.text import slugify
 from django.urls import reverse
 
+from django.utils.text import slugify
 import misaka
 
 from django.contrib.auth import get_user_model
